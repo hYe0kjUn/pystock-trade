@@ -11,9 +11,6 @@ for k in k_list:
 
   for stock_code in stock_list:
     
-    if ratelimit > 55:
-      time.sleep(15)
-      ratelimit = 0
     date_list, stock_high_price_list, stock_low_price_list, stock_last_price_list = Daishin.CpSysDib().getStockChartPriceToDate(60, stock_code)
     ratelimit += 4
     
@@ -48,6 +45,8 @@ for k in k_list:
     print("win: ", win)
     print("lose: ", lose)
     all_revenue_of_k += revenue
+    print("wait")
+    time.sleep(15)
     
   print(f"{k}", all_revenue_of_k)
   print()
