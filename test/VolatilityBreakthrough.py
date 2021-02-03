@@ -41,5 +41,8 @@ for k in k_list:
     print("revenue: ", revenue)
     print("win: ", win)
     print("lose: ", lose)
+    all_revenue_of_k += revenue
     
-  print("all_revenue_of_k: ", all_revenue_of_k)
+  print(f"{k}", all_revenue_of_k)
+  print()
+  print()
