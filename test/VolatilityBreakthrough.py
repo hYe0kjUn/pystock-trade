@@ -4,7 +4,6 @@ k_list = [0.5, 0.6, 0.7, 0.8, 0.9, 1]
 
 for k in k_list:
   all_revenue_of_k = 0
-  print("k: ", k)
   
   stock_list = ["A005930", "A252670", "A114800", "A251340", "A122630", "A233740"] #삼성전자, KODEX 200선물인버스 2X, KODEX 인버스, KODEX 코스닥 150선물인버스, KODEX 레버리지, KODEX 코스닥150 레버리지
 
@@ -34,7 +33,7 @@ for k in k_list:
       else:
         lose += 1
         
-      revenue += last_price - goal_price
+      revenue = revenue + last_price - goal_price
       before_last_price = last_price
       
     print(stock_code)
