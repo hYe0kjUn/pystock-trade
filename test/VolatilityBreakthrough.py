@@ -1,5 +1,8 @@
 from pystock_hts import Daishin
 
+
+stock_list = ["A005930", "A252670", "A114800", "A251340", "A122630", "A233740"] #삼성전자, KODEX 200선물인버스 2X, KODEX 인버스, KODEX 코스닥 150선물인버스, KODEX 레버리지, KODEX 코스닥150 레버리지
+
 k = 0.5
 average = None
 before_last_price = 0
@@ -7,10 +10,14 @@ win = 0
 lose = 0
 revenue = 0
 
-stock_list = ["A005930", "A252670", "A114800", "A251340", "A122630", "A233740"] #삼성전자, KODEX 200선물인버스 2X, KODEX 인버스, KODEX 코스닥 150선물인버스, KODEX 레버리지, KODEX 코스닥150 레버리지
-
 for stock_code in stock_list:
   date_list, stock_high_price_list, stock_low_price_list, stock_last_price_list = Daishin.CpSysDib().getStockChartPriceToDate(60, stock_code)
+  
+  average = None
+  before_last_price = 0
+  win = 0
+  lose = 0
+  revenue = 0
 
   for date, high_price, low_price, last_price in zip(date_list, stock_high_price_list, stock_low_price_list, stock_last_price_list):
     if not average:
