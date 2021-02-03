@@ -2,7 +2,7 @@ from pystock_hts import Daishin
 
 daishin_sys = Daishin.CpSysDib()
 daishin_util = Daishin.CpUtil()
-daishin_trade = Daishin.CpTrade(33505100710)
+daishin_trade = Daishin.CpTrade()
 
 is_connected = daishin_util.getConnected()
 stock_name = daishin_util.getStockCodeToName("A005930")
