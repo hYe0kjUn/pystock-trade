@@ -9,7 +9,7 @@ stock_list = ["A005930", "A252670", "A114800", "A251340", "A122630", "A233740"] 
 
 for stock_code in stock_list:
   
-  date_list, stock_high_price_list, stock_low_price_list, stock_last_price_list = Daishin.CpSysDib().getStockChartPriceToDate(120, stock_code)
+  date_list, stock_high_price_list, stock_low_price_list, stock_last_price_list = Daishin.CpSysDib().getStockChartPriceToDate(30, stock_code)
   ratelimit += 4
   
   average = None
