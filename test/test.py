@@ -16,9 +16,11 @@ print(f"stock_price: {stock_price}")
 stock_per = daishin_sys.getStockPer("A005930")
 print(f"stock_per: {stock_per}")
 
+daishin_trade = Daishin.CpTrade()
 is_buyed = daishin_trade.buyStock("A005930")
 print(f"is_buyed: {is_buyed}")
 
+daishin_trade = Daishin.CpTrade()
 is_selled = daishin_trade.sellStock("A005930")
 print(f"is_selled: {is_selled}")
       
