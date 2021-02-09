@@ -36,4 +36,5 @@ def VolatilityBreakthroughSellBot():
 
 date_list, start_price_list, high_price_list, low_price_list, last_price_list = Daishin.CpSysDib().getStockChartPriceToDate(21, "A229200")
 
+print(date_list, start_price_list, high_price_list, low_price_list, last_price_list)
 print(getKValue(high_price_list, low_price_list, last_price_list, start_price_list))
